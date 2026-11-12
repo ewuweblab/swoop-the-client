@@ -1,26 +1,31 @@
 {
-  "name": "Your Name Here",
-  "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero perferendis, laudantium saepe id neque praesentium quae dignissimos ex provident aut assumenda ratione nemo dicta ullam, dolores voluptate laborum explicabo.",
+  "name": "Swoop",
+  "bio": "Swoop, Eastern Washington University's mascot, is an ambassador, spirit leader, and fun-loving character for the University. A popular character among EWU fans, alumni, & students, he’s adored by all walks of life. His charm, attitude, and high-spirited personality combine to make up why he’s America’s Favorite Mascot.\n\nSwoop’s character was created on September 29, 1973, as the first mascot of EWU. Originally named Victor E. Eagle, in the early 2000’s, his character was revamped into what now makes Swoop “America’s Favorite Mascot”. He strives to entertain crowds at EWU sporting and campus events along with putting on a show.",
+  "avatar": "/images/avatar/avatar.jpg",
   "links": [
     {
-      "label": "Website",
-      "href": "#",
-      "icon": "/images/icons/website.svg"
+      "label": "Instagram",
+      "href": "https://www.instagram.com/ewuathletics/",
+      "icon": "/images/icons/links/0/icon.svg"
     },
     {
       "label": "Social",
       "href": "#",
-      "icon": "/images/icons/social.svg"
+      "icon": "/images/icons/links/1/icon.svg"
     },
     {
       "label": "GitHub",
       "href": "#",
-      "icon": "/images/icons/github.svg"
+      "icon": "/images/icons/links/2/icon.svg"
     },
     {
       "label": "Contact",
       "href": "mailto:you@example.com",
-      "icon": "/images/icons/contact.svg"
+      "icon": "/images/icons/links/3/icon.svg"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:#"
     }
   ]
 }

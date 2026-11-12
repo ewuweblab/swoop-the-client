@@ -10,7 +10,7 @@ import { config, fields, singleton } from '@keystatic/core';
 //
 // Replace the value below with your Keystatic Cloud project, written as
 // "team-slug/project-slug" (shown in the project's URL on keystatic.cloud).
-const KEYSTATIC_CLOUD_PROJECT = 'your-team/your-project';
+const KEYSTATIC_CLOUD_PROJECT = 'swoop/swoop-the-client';
 
 export default config({
   storage: import.meta.env.DEV ? { kind: 'local' } : { kind: 'cloud' },

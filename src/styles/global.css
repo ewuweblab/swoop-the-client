@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer components {
+  .link {
+    @apply flex items-center justify-center gap-3 rounded-lg border border-neutral-200 bg-white px-4 py-3 font-medium transition-colors hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800;
+  }
+
+  /* Icon sits to the left of the label; shrink-0 keeps it square when the label wraps. */
+  .link-icon {
+    @apply size-5 shrink-0 object-contain;
+  }
+}

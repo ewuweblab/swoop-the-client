@@ -1,0 +1,52 @@
+---
+// Everything between the --- fences runs at build time (or on each request in
+// `npm run dev`), never in the visitor's browser. The page ships as plain HTML.
+
+// Keystatic's reader loads content straight from the files in the repo.
+import { createReader } from '@keystatic/core/reader';
+// The same schema the /keystatic admin uses, so the data read here is typed.
+import keystaticConfig from '../../keystatic.config';
+import Layout from '../layouts/Layout.astro';
+
+// process.cwd() is the project root, which is where Keystatic resolves the
+// content paths from keystatic.config.ts (e.g. src/content/profile.json).
+const reader = createReader(process.cwd(), keystaticConfig);
+
+// Read the Profile singleton. readOrThrow() fails the build if the file is
+// missing, instead of quietly rendering an empty page.
+const profile = await reader.singletons.profile.readOrThrow();
+
+// The avatar is optional in the admin. Keystatic stores an uploaded image as a
+// public path like /images/avatar/me.jpg; when none is set, use a placeholder.
+const avatar = profile.avatar ?? 'https://assets.codepen.io/16425/image-placeholder.png';
+---
+
+{/* Layout provides <html>, <head> and the styled <body>; the <title> is passed as a prop. */}
+<Layout title={`${profile.name} — Links`}>
+  {/* A single narrow, centred column that works on phones and wide screens alike. */}
+  <main class="mx-auto max-w-md px-6 py-16 text-center">
+    {/* alt="" marks the avatar as decorative: the name right below already identifies the person. */}
+    <img src={avatar} alt="" class="mx-auto size-full" />
+    <h1 class="mt-4 text-xl font-semibold">{profile.name}</h1>
+    <p class="mt-1 text-sm text-neutral-500 dark:text-neutral-400">{profile.bio}</p>
+
+    {/*
+      One <li> per link, in the order set in the admin. The shared `.link`
+      class (src/styles/global.css) holds the button styles, so they live in
+      one place instead of being repeated on every <a>.
+
+      The icon is optional and only rendered when one was uploaded. Its alt=""
+      marks it as decorative: the label next to it already names the link.
+    */}
+    <ul class="mt-8 space-y-3">
+      {profile.links.map((link) => (
+        <li>
+          <a href={link.href} class="link">
+            {link.icon && <img src={link.icon} alt="" class="link-icon" />}
+            <span>{link.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>

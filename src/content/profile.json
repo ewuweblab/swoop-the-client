@@ -1,0 +1,26 @@
+{
+  "name": "Your Name Here",
+  "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero perferendis, laudantium saepe id neque praesentium quae dignissimos ex provident aut assumenda ratione nemo dicta ullam, dolores voluptate laborum explicabo.",
+  "links": [
+    {
+      "label": "Website",
+      "href": "#",
+      "icon": "/images/icons/website.svg"
+    },
+    {
+      "label": "Social",
+      "href": "#",
+      "icon": "/images/icons/social.svg"
+    },
+    {
+      "label": "GitHub",
+      "href": "#",
+      "icon": "/images/icons/github.svg"
+    },
+    {
+      "label": "Contact",
+      "href": "mailto:you@example.com",
+      "icon": "/images/icons/contact.svg"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   // Cloudflare Worker for the Astro site. Static pages are served straight from
   // the build output; requests for /keystatic and /api/keystatic run the
   // Worker script that the Cloudflare adapter builds.
-  "name": "astro-keystatic-landing-page-links",
+  "name": "swoop-the-client",
   "compatibility_date": "2026-11-09",
   "compatibility_flags": ["nodejs_compat"],
   // The server entry point the adapter builds into dist/.
